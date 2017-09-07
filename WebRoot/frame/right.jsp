@@ -1,8 +1,5 @@
-<%@ page language="java" import="java.util.*" contentType="text/html; charset=UTF-8"%>
-<%
-String path = request.getContextPath();
-String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.getServerPort()+path+"/";
-%>
+<%@ page language="java" contentType="text/html; charset=ISO-8859-1"
+    pageEncoding="ISO-8859-1"%>
 <html>
 <head>
 </head>
@@ -14,7 +11,7 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
 </tr>
 <tr>
 <td>
-<img src="<%=basePath %>images/bg.jpg"/ style="background-repeat:no-repeat" width="1500px" height="600px">
+<img src="${pageContext.request.contextPath }/images/bg.jpg"/ style="background-repeat:no-repeat" width="1500px" height="600px">
 </td>
 </tr>
 </table>

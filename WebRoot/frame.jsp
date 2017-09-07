@@ -1,14 +1,11 @@
-<%@ page language="java" import="java.util.*" contentType="text/html; charset=UTF-8"%>
-<%
-String path = request.getContextPath();
-String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.getServerPort()+path+"/";
-%>
-
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+	pageEncoding="UTF-8"%>
+<%@ taglib uri="/struts-tags" prefix="s"%>
 <frameset rows="80,*">
-   <frame name="top" src="<%=basePath %>frame/top.jsp">
-   <frameset cols="150,*" id="main">
+	<frame name="top" src="${pageContext.request.contextPath }/frame/top.jsp">
+	<frameset cols="150,*" id="main">
 
-      <frame src="<%=basePath %>frame/left.jsp"> 
-     <frame name="right" src="<%=basePath %>frame/right.jsp">
-   </frameset>
+		<frame src="${pageContext.request.contextPath }/frame/left.jsp">
+		<frame name="right" src="${pageContext.request.contextPath }/frame/right.jsp">
+	</frameset>
 </frameset>
